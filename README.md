@@ -9,7 +9,6 @@ the implementation of a Library Stack Monitoring System offers a comprehensive s
 leverages technology to streamline stack management, improve efficiency, enhance security, 
 and provide better user experiences.
 
-## Problems this Project  will Solve
 In conclusion, the Library Stack Monitoring System revolutionizes the management and 
 monitoring of library stacks by incorporating technology and automation. It offers numerous 
 advantages such as increased efficiency, enhanced security, improved user experiences, and 
