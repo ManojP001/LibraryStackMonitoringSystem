@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Book</title>
+</head>
+<body class="flex center">
+    <h1 class="b-btm">Add Book</h1>
+    <form method="POST" action="{{ url_for('add_book') }}">
+        <label for="barcode">Barcode:</label>
+        <input type="text" name="barcode" id="barcode" required><br><br>
+        <label for="book_name">Book Name:</label>
+        <input type="text" name="book_name" id="book_name" required><br><br>
+        <label for="author_name">Author Name:</label>
+        <input type="text" name="author_name" id="author_name" required><br><br>
+        <label for="color">Color:</label>
+        <input type="text" name="book_color" id="book_color" required><br><br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="book_quantity" id="book_quantity" min="1" required><br><br>
+        <label for="front_image">Front Image URL:</label>
+        <input type="text" name="book_image_front_url" id="book_image_front_url" required><br><br>
+        <label for="back_image">Back Image URL:</label>
+        <input type="text" name="book_image_back_url" id="book_image_back_url" required><br><br>
+        <input class="light-button"type="submit" value="Add Book">
+    </form>
+    <br>
+    <a class="light-button" href="{{ url_for('admin_home') }}">Back</a>
+</body>
+</html>

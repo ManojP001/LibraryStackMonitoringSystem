@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Mode</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="flex center">
+	<h1 class="b-btm">Welcome to Student Mode</h1>
+	<h2>Please select an option:</h2>
+	<ul>
+		<li class="mg-btm b-btm"><a href="{{ url_for('search_book') }}">Search Book</a></li class="mg-btm bd-btm">
+		<li class="mg-btm b-btm"><a href="{{ url_for('borrow_book') }}">Borrow Book</a></li class="mg-btm bd-btm">
+		<li class="mg-btm b-btm"><a href="{{ url_for('return_book') }}">Return Book</a></li class="mg-btm bd-btm">
+	</ul>
+    <a class="light-button" href="{{ url_for('main_page') }}">Back</a>
+</body>
+</html>

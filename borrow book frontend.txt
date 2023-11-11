@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<title>Borrow Book</title>
+</head>
+<body>
+	<h1>Borrow Book</h1>
+	{% if error %}
+		<p style="color: red">{{ error }}</p>
+	{% endif %}
+	<form method="POST">
+		<label for="barcode">Book Barcode:</label><br>
+		<input type="text" id="barcode" name="barcode"><br>
+		<label for="student_id">Student ID:</label><br>
+		<input type="text" id="student_id" name="student_id"><br><br>
+		<input type="submit" value="Borrow Book">
+	</form>
+    <a href="{{ url_for('student_mode') }}">Back</a>
+</body>
+</html>

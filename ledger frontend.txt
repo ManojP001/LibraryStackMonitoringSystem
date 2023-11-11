@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Library Management System - Ledger</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+<body class="ledger flex center">
+	<h1 class="b-btm">Library Management System - Ledger</h1>
+	<table>
+		<tr>
+			<th>Book ID</th>
+			<th>Student ID</th>
+			<th>Borrow Date</th>
+			<th>Return Date</th>
+			<th>Not Returned</th>
+		</tr>
+		 {% for entry in entries %}
+		<tr>
+			<td>{{ entry.book_name }}</td>
+			<td>{{ entry.student_id }}</td>
+			<td>{{ entry.borrow_date }}</td>
+			<td>{{ entry.return_date }}</td>
+			<td>{{ entry.status }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+    <a class="light-button"href="{{ url_for('admin_home') }}">Back</a>
+</body>
+</html>

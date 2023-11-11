@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Search Student Result</title>
+  </head>
+  <body class="flex center">
+    <h1 class="b-btm">Search Student Result</h1>
+    <p><strong>Student ID:</strong> {{ student_id }}</p>
+    <p><strong>Student Name:</strong> {{ student_name }}</p>
+    <p><strong>Books Borrowed:</strong></p>
+    <ul>
+    {% for book in books_borrowed %}
+      <li>{{ book }}</li>
+    {% endfor %}
+    </ul>
+    <a class="light-button" href="{{ url_for('admin_home') }}">Back</a>
+  </body>
+</html>

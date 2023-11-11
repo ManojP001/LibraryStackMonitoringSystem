@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Book</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="b-btm">Search Book by Name</h1>
+    <form  kmaction="{{ url_for('search_book_by_name') }}" method="POST">
+        <label for="book_name">Book Name:</label>
+        <input type="text" name="book_name" required><br><br>
+        <input class="mg-lft light-button"type="submit" value="Search">
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Student by ID</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body class="flex center">
+    <h1 class="b-btm">Search by Student ID</h1>
+    <form method="post" action="{{ url_for('search_student_by_id') }}">
+      <label for="student_id">Student ID:</label>
+      <input  type="text" id="student_id" name="student_id" required><br><br>
+      <input class="light-button" type="submit" value="Search">
+    </form>
+    {% if student %}
+    <h2>Student Details</h2>
+    <p><strong>Name:</strong> {{ student.name }}</p>
+    <p><strong>USN:</strong> {{ student.usn }}</p>
+    <h2>Books Borrowed</h2>
+    <ul>
+      {% for book in student.books_borrowed %}
+      <li>{{ book }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </body>
+</html>

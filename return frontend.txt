@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Return Book</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="flex center">
+	<h1 class="b-btm">Return Book</h1>
+	{% if error %}
+		<p style="color: red">{{ error }}</p>
+	{% endif %}
+	<form method="POST">
+		<label for="barcode">Book Barcode:</label><br>
+		<input type="text" id="barcode" name="barcode"><br>
+		<label for="student_id">Student ID:</label><br>
+		<input type="text" id="student_id" name="student_id"><br><br>
+		<input class="light-button "type="submit" value="Return Book">
+	</form>
+    <a class="light-button" href="{{ url_for('student_mode') }}">Back</a>
+</body>
+</html>
